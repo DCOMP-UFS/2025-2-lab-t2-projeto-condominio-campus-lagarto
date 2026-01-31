@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infraestrutura de Pesquisa - Coletivo Subjetividade UFS</title>
+    <style>
+        /* --- RESET E VARIÁVEIS --- */
+        :root {
+            --ufs-blue: #004b8d;
+            --ufs-dark: #002a50;
+            --accent: #e67e22;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --text: #333333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light-bg);
+        }
+
+        /* --- NAVEGAÇÃO --- */
+        nav {
+            background-color: var(--ufs-dark);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* --- HEADER HERO --- */
+        header {
+            background: linear-gradient(135deg, var(--ufs-blue), var(--ufs-dark));
+            color: var(--white);
+            padding: 4rem 20px;
+            text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+
+        /* --- SEÇÕES GERAIS --- */
+        section { padding: 4rem 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        
+        h2 {
+            color: var(--ufs-blue);
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        /* --- GRID DE INFORMAÇÕES --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--ufs-blue);
+        }
+        .card h3 { margin-bottom: 15px; color: var(--ufs-dark); }
+
+        /* --- TOPOLOGIA --- */
+        .topology-section { text-align: center; background-color: var(--white); }
+        .topology-img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .caption { margin-top: 10px; color: #666; font-style: italic; font-size: 0.9rem; }
+
+        /* --- CONDOMÍNIO E ADESÃO --- */
+        .condominio-bg { background-color: #e9ecef; }
+        
+        .results-list { list-style: none; }
+        .results-list li {
+            background: var(--white);
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .cta-box {
+            background-color: var(--ufs-dark);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta-box h3 { color: var(--accent); margin-bottom: 15px; }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #222;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Pesquisa UFS</div>
+            <div class="nav-links">
+                <a href="#grupo">O Grupo</a>
+                <a href="#projeto">Projeto de Rede</a>
+                <a href="#resultados">Resultados</a>
+                <a href="#condominio">Condomínio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Coletivo de Estudos da Subjetividade</h1>
+            <p>Infraestrutura Tecnológica para Pesquisa em Psicologia e Ciências Humanas</p>
+        </div>
+    </header>
+
+    <section id="grupo">
+        <div class="container">
+            <h2>O Cliente: Grupo de Pesquisa Individual</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h3>Identificação</h3>
+                    <p><strong>Nome:</strong> Coletivo de Estudos da Subjetividade e Políticas para a Vida</p>
+                    <p><strong>Líder:</strong> Prof. Dr. Helmir Oliveira Rodrigues</p>
+                    <p><strong>Campus:</strong> Lagarto (Centro 14)</p>
+                </div>
+                <div class="card">
+                    <h3>Natureza da Pesquisa</h3>
+                    <p>O grupo trabalha com dados sensíveis de alta complexidade, incluindo narrativas de vida, histórico psiquiátrico e entrevistas qualitativas sobre raça e subjetividade. A segurança e a integridade desses dados são requisitos críticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projeto" class="topology-section">
+        <div class="container">
+            <h2>Solução de Infraestrutura Proposta</h2>
+            <p style="margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Para atender à demanda de segurança do grupo, foi desenvolvida uma topologia de rede segregada, separando o tráfego de pesquisadores (usuários) dos servidores de armazenamento (dados), com controle de acesso centralizado.
+            </p>
+            <strong>Dentre os servidores temos:</strong>
+                <p>Servidor para armazenamento de documentos relevantes às pesquisas como como laudos, entrevistas, levantamentos, etc...</p>
+                <p>Servidor de backup para os arquivos importantes armazenados.</p>
+                <p>Servidor para rodar aplicações web como o site do grupo.</p>
+                <p>Adicionalmente, foi previsto um serviço de DNS local para que os pesquisadores acessem os serviços através do domínio amigável <em>subjetividade.ufs.br</em>.</p>
+            
+            <img src="topologia.png" alt="Diagrama da Topologia de Rede" class="topology-img">
+            <p class="caption">Figura 1: Topologia Lógica da Rede do Laboratório.</p>
+        </div>
+    </section>
+
+    <section id="resultados" class="condominio-bg">
+        <div class="container">
+            <h2>Resultados Esperados com o Projeto</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h3>🛡️ Segurança da Informação (LGPD)</h3>
+                    <p>Garantia de anonimato e proteção de dados sensíveis dos participantes das pesquisas (entrevistas psiquiátricas e sociais), adequando o grupo às normas da Lei Geral de Proteção de Dados.</p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Disponibilidade de Dados</h3>
+                    <p>Centralização dos arquivos em servidor dedicado (File Server), eliminando a perda de dados por falhas em pendrives ou computadores pessoais de alunos.</p>
+                </div>
+                <div class="card">
+                    <h3>🌐 Acesso Organizado</h3>
+                    <p>Implementação de DNS local (<em>subjetividade.ufs.br</em>) e endereçamento IP hierárquico, facilitando a manutenção e a escalabilidade para novos pesquisadores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="condominio">
+        <div class="container">
+            <h2>O Modelo de "Condomínio de Laboratórios"</h2>
+            <p>O Condomínio de Laboratórios é uma proposta de <strong>infraestrutura compartilhada</strong>. Em vez de cada grupo de pesquisa arcar com custos elevados de servidores e segurança individualmente, os recursos são unificados em um Data Center acadêmico compartilhado.</p>
+            
+            <br>
+
+            <h3>Resultados de Pesquisa Potencializados pelo Condomínio</h3>
+            <ul class="results-list">
+                <li>
+                    <strong>Processamento de Big Data Qualitativo:</strong> Acesso a servidores de alto desempenho para rodar softwares de análise qualitativa em grandes volumes de textos e transcrições, algo inviável em PCs comuns.
+                </li>
+                <li>
+                    <strong>Colaboração Interdisciplinar:</strong> A rede unificada permite que dados (quando autorizados) sejam cruzados com outros grupos de pesquisa (ex: Saúde Coletiva + Psicologia), gerando novos insights científicos.
+                </li>
+                <li>
+                    <strong>Backup Automatizado e Redundância:</strong> No modelo de condomínio, a responsabilidade pelo backup é centralizada, garantindo que anos de pesquisa histórica não sejam perdidos por falha humana.
+                </li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>Quando aderir à proposta de Condomínio?</h3>
+                <p>A migração do modelo individual para o Condomínio é recomendada quando:</p>
+                <div style="text-align: left; display: inline-block; margin-top: 15px;">
+                    <p>✅ O volume de dados ultrapassa a capacidade de armazenamento local (TB).</p>
+                    <p>✅ A pesquisa exige processamento computacional intensivo (IA, Análise de Dados).</p>
+                    <p>✅ Há necessidade de acesso remoto seguro (VPN) para pesquisadores externos.</p>
+                    <p>✅ O custo de manutenção de hardware próprio se torna insustentável para o grupo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Projeto de Redes de Computadores - UFS</p>
+        <p>Desenvolvido para fins acadêmicos - Docker + Apache + AWS</p>
+    </footer>
+
+</body>
+</html>
