@@ -1,0 +1,173 @@
+/* Reset e Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #004a8f; /* Azul UFS */
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #004a8f;
+    margin-bottom: 10px;
+}
+
+/* Grid de Botões (Dashboard) */
+.grid-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.btn .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Cores Específicas dos Botões */
+.btn-edu { background: linear-gradient(135deg, #3498db, #2980b9); }
+.btn-coletivo { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+.btn-odonto { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+.btn-lab4 { background: linear-gradient(135deg, #e67e22, #d35400); }
+.btn-lab5 { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+/* --- SEÇÃO DE PLANTA BAIXA --- */
+.planta-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.section-header {
+    margin-bottom: 25px;
+    border-left: 5px solid #004a8f;
+    padding-left: 15px;
+}
+
+.planta-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.map-viewer {
+    flex: 2;
+    min-width: 300px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.map-viewer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.map-viewer:hover img {
+    transform: scale(1.02);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .planta-container {
+        flex-direction: column;
+    }
+}
