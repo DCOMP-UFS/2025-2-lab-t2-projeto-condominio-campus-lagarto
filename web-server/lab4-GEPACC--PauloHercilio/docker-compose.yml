@@ -2,9 +2,9 @@ services:
   # Servidor Web - Nginx
   web:
     image: nginx:alpine
-    container_name: gepacc-web
+    container_name: gepacc-webb
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - ./site:/usr/share/nginx/html:ro
     networks:
