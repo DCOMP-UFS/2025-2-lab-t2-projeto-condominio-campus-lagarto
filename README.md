@@ -119,11 +119,13 @@ Projeto de infraestrutura compartilhada de rede para 6 laboratórios de pesquisa
 
 **Infraestrutura:**
 
-- Topologia simulada (IMUNES)
-- Servidor centralizado
-- Estações para análise de dados
+- 1 Roteador
+- 1 switch
+- 2 pc's
+- 1 servidor web
+- servidor BD
 
-**Link:** [Inserir link aqui]
+**Link:** http://3.85.22.207/
 
 ---
 
