@@ -1,76 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Laboratórios - Campus Lagarto</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Adicionando apenas a cor do seu botão para não quebrar o style.css original */
-        .btn-fisio { background-color: #dd4814; color: white; }
-        .btn-fisio:hover { background-color: #bf3e11; }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <div class="logo">Campus Lagarto - UFS</div>
-            <nav>
-                <a href="#projetos">Projetos</a>
-                <a href="#planta">Planta Baixa</a>
-            </nav>
-        </div>
-    </header>
-
-    <section id="projetos" class="container">
-        <div class="intro">
-            <h1>Dashboard de Projetos</h1>
-            <p>Selecione o laboratório ou departamento que deseja acessar:</p>
-        </div>
-        
-        <div class="grid-buttons">
-            <a href="./lab1/site/index.html" class="btn btn-edu">
-                <span class="icon">📚</span>
-                <span>Lab 1 - EduSaúde</span>
-            </a>
-            <a href="./lab2/src/index.html" class="btn btn-coletivo">
-                <span class="icon">👥</span>
-                <span>Lab 2 - Coletivo e Subjetividade</span>
-            </a>
-            <a href="./lab3/static/index.html" class="btn btn-odonto">
-                <span class="icon">🦷</span>
-                <span>Lab 3 - Odonto</span>
-            </a>
-            <a href="#" class="btn btn-lab4">
-                <span class="icon">🔬</span>
-                <span>Lab 4 - Gepacc</span>
-            </a>
-            
-            <a href="./lab6/index.html" class="btn btn-fisio">
-                <span class="icon">🏥</span>
-                <span>Lab 5 - Fisioterapia</span>
-            </a>
-        </div>
-    </section>
-
-    <hr class="divider">
-
-    <section id="planta" class="container planta-section">
-        <div class="section-header">
-            <h2>Planta Baixa Geral</h2>
-            <p>Visualização espacial dos laboratórios e salas do complexo.</p>
-        </div>
-
-        <div class="planta-container">
-            <div class="map-viewer">
-                <img src="./planta.png" alt="Planta Baixa do Campus">
-                <div class="map-overlay">Clique para ampliar</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portal de Laboratórios - Campus Lagarto</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            /* Adicionando apenas a cor do seu botão para não quebrar o style.css original */
+            .btn-fisio {
+                background-color: #dd4814;
+                color: white;
+            }
+            .btn-fisio:hover {
+                background-color: #bf3e11;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="logo">Campus Lagarto - UFS</div>
+                <nav>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#planta">Planta Baixa</a>
+                </nav>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <footer>
-        <p>&copy; 2026 Universidade Federal de Sergipe - Campus Lagarto</p>
-    </footer>
-</body>
+        <section id="projetos" class="container">
+            <div class="intro">
+                <h1>Dashboard de Projetos</h1>
+                <p>
+                    Selecione o laboratório ou departamento que deseja acessar:
+                </p>
+            </div>
+
+            <div class="grid-buttons">
+                <a href="./lab1/site/index.html" class="btn btn-edu">
+                    <span class="icon">📚</span>
+                    <span>Lab 1 - EduSaúde</span>
+                </a>
+                <a href="./lab2/src/index.html" class="btn btn-coletivo">
+                    <span class="icon">👥</span>
+                    <span>Lab 2 - Coletivo e Subjetividade</span>
+                </a>
+                <a href="./lab3/static/index.html" class="btn btn-odonto">
+                    <span class="icon">🦷</span>
+                    <span>Lab 3 - Odonto</span>
+                </a>
+                <a href="./lab4/site/index.html" class="btn btn-lab4">
+                    <span class="icon">🔬</span>
+                    <span>Lab 4 - Gepacc</span>
+                </a>
+
+                <a href="./lab6/index.html" class="btn btn-fisio">
+                    <span class="icon">🏥</span>
+                    <span>Lab 5 - Fisioterapia</span>
+                </a>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="planta" class="container planta-section">
+            <div class="section-header">
+                <h2>Planta Baixa Geral</h2>
+                <p>
+                    Visualização espacial dos laboratórios e salas do complexo.
+                </p>
+            </div>
+
+            <div class="planta-container">
+                <div class="map-viewer">
+                    <img src="./planta.png" alt="Planta Baixa do Campus" />
+                    <div class="map-overlay">Clique para ampliar</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Universidade Federal de Sergipe - Campus Lagarto</p>
+        </footer>
+    </body>
 </html>
