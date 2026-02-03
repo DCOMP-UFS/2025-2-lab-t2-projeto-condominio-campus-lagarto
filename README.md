@@ -84,7 +84,7 @@ Projeto de infraestrutura compartilhada de rede para 6 laboratórios de pesquisa
 
 **Linhas:** Acessibilidade Web (WCAG), Tecnologias Assistivas, UX, Inclusão Digital
 
-**Link:** [Inserir link aqui]
+**Link:** http://100.31.150.117/
 
 ---
 
