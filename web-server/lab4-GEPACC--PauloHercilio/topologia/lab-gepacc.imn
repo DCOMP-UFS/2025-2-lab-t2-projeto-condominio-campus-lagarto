@@ -1,0 +1,311 @@
+node n1 {
+    type router
+    model host
+    network-config {
+        hostname Internet
+        !
+        interface eth0
+            ip address 200.17.100.1/24
+        !
+    }
+    canvas c1
+    iconcoords {400.0 50.0}
+    labelcoords {400.0 82.0}
+    interface-peer {eth0 n2}
+    comment {Conexao Externa - UFS}
+}
+
+node n2 {
+    type router
+    model router
+    network-config {
+        hostname Gateway-GEPACC
+        !
+        interface eth0
+            ip address 200.17.100.2/24
+        !
+        interface eth1
+            ip address 192.168.1.1/24
+        !
+    }
+    canvas c1
+    iconcoords {400.0 150.0}
+    labelcoords {400.0 182.0}
+    interface-peer {eth0 n1}
+    interface-peer {eth1 n3}
+    comment {Gateway do Laboratorio GEPACC - Tecnico: kertf22}
+}
+
+node n3 {
+    type lanswitch
+    network-config {
+        hostname Switch-L2-GEPACC
+        !
+    }
+    canvas c1
+    iconcoords {400.0 280.0}
+    labelcoords {400.0 312.0}
+    interface-peer {e0 n2}
+    interface-peer {e1 n4}
+    interface-peer {e2 n5}
+    interface-peer {e3 n6}
+    interface-peer {e4 n7}
+    interface-peer {e5 n8}
+    interface-peer {e6 n9}
+    comment {Switch Gerenciavel 24 portas - GEPACC}
+}
+
+node n4 {
+    type router
+    model host
+    network-config {
+        hostname Servidor-Web
+        !
+        interface eth0
+            ip address 192.168.1.10/24
+        !
+    }
+    canvas c1
+    iconcoords {150.0 400.0}
+    labelcoords {150.0 432.0}
+    interface-peer {eth0 n3}
+    comment {Servidor Web - Hospedagem de aplicacoes acessiveis}
+}
+
+node n5 {
+    type router
+    model host
+    network-config {
+        hostname Servidor-BD
+        !
+        interface eth0
+            ip address 192.168.1.11/24
+        !
+    }
+    canvas c1
+    iconcoords {280.0 400.0}
+    labelcoords {280.0 432.0}
+    interface-peer {eth0 n3}
+    comment {Servidor de Banco de Dados - Dados de pesquisa GEPACC}
+}
+
+node n6 {
+    type router
+    model host
+    network-config {
+        hostname Servidor-App
+        !
+        interface eth0
+            ip address 192.168.1.12/24
+        !
+    }
+    canvas c1
+    iconcoords {400.0 400.0}
+    labelcoords {400.0 432.0}
+    interface-peer {eth0 n3}
+    comment {Servidor de Aplicacao - Ferramentas de acessibilidade}
+}
+
+node n7 {
+    type router
+    model host
+    network-config {
+        hostname Servidor-Auth
+        !
+        interface eth0
+            ip address 192.168.1.13/24
+        !
+    }
+    canvas c1
+    iconcoords {520.0 400.0}
+    labelcoords {520.0 432.0}
+    interface-peer {eth0 n3}
+    comment {Servidor de Autenticacao - Controle de acesso}
+}
+
+node n8 {
+    type wlan
+    network-config {
+        hostname AP-WiFi-GEPACC
+        !
+        interface wireless
+            ip address 192.168.2.1/24
+        !
+    }
+    canvas c1
+    iconcoords {650.0 400.0}
+    labelcoords {650.0 432.0}
+    interface-peer {e0 n3}
+    comment {Access Point WiFi - Testes de dispositivos moveis}
+}
+
+node n9 {
+    type router
+    model PC
+    network-config {
+        hostname PC-Pesquisador-01
+        !
+        interface eth0
+            ip address 192.168.1.100/24
+        !
+    }
+    canvas c1
+    iconcoords {150.0 520.0}
+    labelcoords {150.0 552.0}
+    interface-peer {eth0 n3}
+    comment {Estacao de trabalho - Pesquisador GEPACC}
+}
+
+node n10 {
+    type router
+    model PC
+    network-config {
+        hostname PC-Pesquisador-02
+        !
+        interface eth0
+            ip address 192.168.1.101/24
+        !
+    }
+    canvas c1
+    iconcoords {280.0 520.0}
+    labelcoords {280.0 552.0}
+    interface-peer {eth0 n3}
+    comment {Estacao de trabalho - Pesquisador GEPACC}
+}
+
+node n11 {
+    type router
+    model PC
+    network-config {
+        hostname PC-Testes-Acessibilidade
+        !
+        interface eth0
+            ip address 192.168.1.102/24
+        !
+    }
+    canvas c1
+    iconcoords {400.0 520.0}
+    labelcoords {400.0 552.0}
+    interface-peer {eth0 n3}
+    comment {Estacao de testes de acessibilidade - Tecnologias assistivas}
+}
+
+link l1 {
+    nodes {n1 n2}
+    bandwidth 100000000
+}
+
+link l2 {
+    nodes {n2 n3}
+    bandwidth 1000000000
+}
+
+link l3 {
+    nodes {n3 n4}
+    bandwidth 1000000000
+}
+
+link l4 {
+    nodes {n3 n5}
+    bandwidth 1000000000
+}
+
+link l5 {
+    nodes {n3 n6}
+    bandwidth 1000000000
+}
+
+link l6 {
+    nodes {n3 n7}
+    bandwidth 1000000000
+}
+
+link l7 {
+    nodes {n3 n8}
+    bandwidth 1000000000
+}
+
+link l8 {
+    nodes {n3 n9}
+    bandwidth 1000000000
+}
+
+link l9 {
+    nodes {n3 n10}
+    bandwidth 1000000000
+}
+
+link l10 {
+    nodes {n3 n11}
+    bandwidth 1000000000
+}
+
+annotation a1 {
+    type text
+    iconcoords {20.0 20.0}
+    label {TOPOLOGIA DE REDE - LABORATORIO GEPACC}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 14
+    canvas c1
+}
+
+annotation a2 {
+    type text
+    iconcoords {20.0 40.0}
+    label {Grupo de Estudo e Pesquisa em Acessibilidade}
+    labelcolor #666666
+    fontfamily {Arial}
+    fontsize 10
+    canvas c1
+}
+
+annotation a3 {
+    type text
+    iconcoords {20.0 60.0}
+    label {UFS - Campus de Lagarto}
+    labelcolor #666666
+    fontfamily {Arial}
+    fontsize 10
+    canvas c1
+}
+
+annotation a4 {
+    type text
+    iconcoords {20.0 80.0}
+    label {Responsavel: Luana Feroni Andrade}
+    labelcolor #666666
+    fontfamily {Arial}
+    fontsize 10
+    canvas c1
+}
+
+annotation a5 {
+    type text
+    iconcoords {20.0 100.0}
+    label {Tecnico: kertf22}
+    labelcolor #666666
+    fontfamily {Arial}
+    fontsize 10
+    canvas c1
+}
+
+canvas c1 {
+    name {Laboratorio GEPACC}
+    refpt {0 0 47.5791667 -122.132322 2.0}
+    scale {150.0}
+    size {800 600}
+}
+
+option global {
+    interface_names no
+    ip_addresses yes
+    ipv6_addresses no
+    node_labels yes
+    link_labels yes
+    show_api no
+    background_images no
+    annotations yes
+    grid yes
+    traffic_start 0
+}

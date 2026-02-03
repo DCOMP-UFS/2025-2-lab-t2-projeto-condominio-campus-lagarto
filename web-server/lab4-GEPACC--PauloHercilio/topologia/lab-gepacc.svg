@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" width="800" height="650">
+  <defs>
+    <style>
+      .title { font: bold 16px Arial; fill: #002b5b; }
+      .subtitle { font: 11px Arial; fill: #666; }
+      .node-label { font: 10px Arial; fill: #333; }
+      .ip-label { font: 9px monospace; fill: #1a5f7a; }
+      .line { stroke: #57c5b6; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="650" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="20" y="30" class="title">TOPOLOGIA DE REDE - LABORATÓRIO GEPACC</text>
+  <text x="20" y="48" class="subtitle">Grupo de Estudo e Pesquisa em Acessibilidade | UFS - Campus de Lagarto</text>
+  <text x="20" y="63" class="subtitle">Responsável: Luana Feroni Andrade | Técnico: kertf22</text>
+
+  <!-- Internet Cloud -->
+  <ellipse cx="400" cy="100" rx="60" ry="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="400" y="105" text-anchor="middle" class="node-label">Internet</text>
+  <text x="400" y="118" text-anchor="middle" class="ip-label">200.17.100.1/24</text>
+
+  <!-- Link Internet - Gateway -->
+  <line x1="400" y1="130" x2="400" y2="170" class="line"/>
+
+  <!-- Gateway -->
+  <rect x="350" y="170" width="100" height="50" rx="5" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="400" y="192" text-anchor="middle" class="node-label">Gateway</text>
+  <text x="400" y="207" text-anchor="middle" class="ip-label">192.168.1.1/24</text>
+
+  <!-- Link Gateway - Switch -->
+  <line x1="400" y1="220" x2="400" y2="270" class="line"/>
+
+  <!-- Switch L2 -->
+  <rect x="320" y="270" width="160" height="40" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="400" y="295" text-anchor="middle" class="node-label">Switch L2 - 24 portas</text>
+
+  <!-- Links from Switch -->
+  <line x1="340" y1="310" x2="100" y2="380" class="line"/>
+  <line x1="360" y1="310" x2="220" y2="380" class="line"/>
+  <line x1="400" y1="310" x2="340" y2="380" class="line"/>
+  <line x1="420" y1="310" x2="460" y2="380" class="line"/>
+  <line x1="450" y1="310" x2="580" y2="380" class="line"/>
+  <line x1="470" y1="310" x2="700" y2="380" class="line"/>
+
+  <!-- Servidor Web -->
+  <rect x="50" y="380" width="100" height="60" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="100" y="405" text-anchor="middle" class="node-label">Servidor Web</text>
+  <text x="100" y="420" text-anchor="middle" class="ip-label">192.168.1.10</text>
+
+  <!-- Servidor BD -->
+  <rect x="170" y="380" width="100" height="60" rx="5" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
+  <text x="220" y="405" text-anchor="middle" class="node-label">Servidor BD</text>
+  <text x="220" y="420" text-anchor="middle" class="ip-label">192.168.1.11</text>
+
+  <!-- Servidor App -->
+  <rect x="290" y="380" width="100" height="60" rx="5" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="340" y="405" text-anchor="middle" class="node-label">Servidor App</text>
+  <text x="340" y="420" text-anchor="middle" class="ip-label">192.168.1.12</text>
+
+  <!-- Servidor Auth -->
+  <rect x="410" y="380" width="100" height="60" rx="5" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+  <text x="460" y="405" text-anchor="middle" class="node-label">Servidor Auth</text>
+  <text x="460" y="420" text-anchor="middle" class="ip-label">192.168.1.13</text>
+
+  <!-- Access Point WiFi -->
+  <ellipse cx="580" cy="410" rx="50" ry="30" fill="#e0f7fa" stroke="#00838f" stroke-width="2"/>
+  <text x="580" y="407" text-anchor="middle" class="node-label">AP WiFi</text>
+  <text x="580" y="422" text-anchor="middle" class="ip-label">192.168.2.1</text>
+
+  <!-- Nobreak -->
+  <rect x="650" y="380" width="100" height="60" rx="5" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="700" y="405" text-anchor="middle" class="node-label">Nobreak</text>
+  <text x="700" y="420" text-anchor="middle" class="ip-label">3kVA</text>
+
+  <!-- Estações de Trabalho -->
+  <line x1="100" y1="440" x2="100" y2="500" class="line"/>
+  <line x1="220" y1="440" x2="220" y2="500" class="line"/>
+  <line x1="340" y1="440" x2="340" y2="500" class="line"/>
+
+  <!-- PC 1 -->
+  <rect x="50" y="500" width="100" height="50" rx="5" fill="#eceff1" stroke="#546e7a" stroke-width="2"/>
+  <text x="100" y="520" text-anchor="middle" class="node-label">PC Pesquisador 01</text>
+  <text x="100" y="535" text-anchor="middle" class="ip-label">192.168.1.100</text>
+
+  <!-- PC 2 -->
+  <rect x="170" y="500" width="100" height="50" rx="5" fill="#eceff1" stroke="#546e7a" stroke-width="2"/>
+  <text x="220" y="520" text-anchor="middle" class="node-label">PC Pesquisador 02</text>
+  <text x="220" y="535" text-anchor="middle" class="ip-label">192.168.1.101</text>
+
+  <!-- PC Testes -->
+  <rect x="290" y="500" width="100" height="50" rx="5" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2"/>
+  <text x="340" y="520" text-anchor="middle" class="node-label">PC Testes</text>
+  <text x="340" y="535" text-anchor="middle" class="ip-label">192.168.1.102</text>
+
+  <!-- WiFi devices -->
+  <line x1="580" y1="440" x2="520" y2="510" class="line" stroke-dasharray="5,5"/>
+  <line x1="580" y1="440" x2="640" y2="510" class="line" stroke-dasharray="5,5"/>
+
+  <!-- Mobile 1 -->
+  <rect x="490" y="510" width="60" height="40" rx="10" fill="#fff" stroke="#00838f" stroke-width="2"/>
+  <text x="520" y="535" text-anchor="middle" class="node-label">Mobile</text>
+
+  <!-- Mobile 2 -->
+  <rect x="610" y="510" width="60" height="40" rx="10" fill="#fff" stroke="#00838f" stroke-width="2"/>
+  <text x="640" y="535" text-anchor="middle" class="node-label">Tablet</text>
+
+  <!-- Legend -->
+  <rect x="20" y="580" width="760" height="60" rx="5" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="30" y="600" class="subtitle">Legenda:</text>
+  <rect x="30" y="610" width="20" height="15" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="55" y="622" class="node-label">Servidores</text>
+  <rect x="130" y="610" width="20" height="15" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="155" y="622" class="node-label">Switch</text>
+  <rect x="210" y="610" width="20" height="15" fill="#fff3e0" stroke="#ef6c00"/>
+  <text x="235" y="622" class="node-label">Gateway</text>
+  <ellipse cx="320" cy="617" rx="10" ry="7" fill="#e0f7fa" stroke="#00838f"/>
+  <text x="335" y="622" class="node-label">WiFi</text>
+  <rect x="390" y="610" width="20" height="15" fill="#eceff1" stroke="#546e7a"/>
+  <text x="415" y="622" class="node-label">Estações</text>
+  <line x1="490" y1="617" x2="520" y2="617" stroke="#57c5b6" stroke-width="2"/>
+  <text x="525" y="622" class="node-label">Cabeada</text>
+  <line x1="590" y1="617" x2="620" y2="617" stroke="#57c5b6" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="625" y="622" class="node-label">Wireless</text>
+</svg>

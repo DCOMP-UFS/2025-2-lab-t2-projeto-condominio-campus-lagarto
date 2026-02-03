@@ -1,0 +1,71 @@
+services:
+  # Servidor Web - Nginx
+  web:
+    image: nginx:alpine
+    container_name: gepacc-web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+    networks:
+      - gepacc-network
+    restart: unless-stopped
+
+  # Servidor de Banco de Dados - MySQL
+  db:
+    image: mysql:8.0
+    container_name: gepacc-db
+    environment:
+      MYSQL_ROOT_PASSWORD: gepacc_root_2025
+      MYSQL_DATABASE: gepacc_pesquisa
+      MYSQL_USER: gepacc_user
+      MYSQL_PASSWORD: gepacc_pass_2025
+    volumes:
+      - gepacc-db-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - gepacc-network
+    restart: unless-stopped
+
+  # Servidor de Aplicação - Node.js (para futuras APIs)
+  app:
+    image: node:18-alpine
+    container_name: gepacc-app
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    ports:
+      - "3000:3000"
+    networks:
+      - gepacc-network
+    command: sh -c "if [ -f package.json ]; then npm install && npm start; else echo 'App server ready - waiting for application code' && tail -f /dev/null; fi"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  # phpMyAdmin - Interface para gerenciar o banco
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: gepacc-phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: gepacc_root_2025
+    ports:
+      - "8081:80"
+    networks:
+      - gepacc-network
+    depends_on:
+      - db
+    restart: unless-stopped
+
+networks:
+  gepacc-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24
+
+volumes:
+  gepacc-db-data:
