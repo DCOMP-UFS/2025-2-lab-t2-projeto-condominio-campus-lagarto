@@ -7,7 +7,12 @@ services:
     networks:
       - rede-laboratorio
 
-
+  db:
+    image: postgres
+    restart: always
+    shm_size: 300mb
+    environment:
+      POSTGRES_PASSWORD: teste123
 
 networks:
   rede-laboratorio:
