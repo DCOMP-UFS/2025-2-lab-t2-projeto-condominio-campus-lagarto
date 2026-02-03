@@ -1,0 +1,14 @@
+services:
+  web-server:
+    build:
+      context: "./web-server"
+    ports:
+      - "80:80"
+    networks:
+      - rede-laboratorio
+
+
+
+networks:
+  rede-laboratorio:
+    driver: bridge
