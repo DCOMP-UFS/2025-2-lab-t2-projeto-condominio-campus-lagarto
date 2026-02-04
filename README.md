@@ -62,7 +62,7 @@ Projeto de infraestrutura compartilhada de rede para 6 laboratórios de pesquisa
 
 **Projetos:** 8 projetos de pesquisa ativos (PVG/PIG 2014-2023)
 
-**Link:** [Inserir link aqui]
+**Link:** [http://50.17.73.82/](https://50.17.73.82/)
 
 ---
 
