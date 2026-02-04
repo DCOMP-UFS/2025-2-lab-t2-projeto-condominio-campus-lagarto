@@ -42,7 +42,7 @@ Projeto de infraestrutura compartilhada de rede para 6 laboratórios de pesquisa
 - File Server + Backup Server + Web Server
 - DNS local (subjetividade.ufs.br)
 
-**Link:** [Inserir link aqui]
+**Link:** http://50.16.94.243/
 
 ---
 
