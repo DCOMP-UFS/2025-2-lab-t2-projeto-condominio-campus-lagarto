@@ -125,7 +125,7 @@ Projeto de infraestrutura compartilhada de rede para 6 laboratórios de pesquisa
 - 1 servidor web
 - servidor BD
 
-**Link:** http://3.85.22.207/
+**Link:** http://13.217.224.6
 
 ---
 
